@@ -1,5 +1,7 @@
 { config, pkgs, lib, useOptionalModule, ...}:
 
 {
-    imports = lib.optional useOptionalModule ./arduino.nix;
+    options.custom.isDev = {
+        imports = ./arduino.nix;
+    };
 }
