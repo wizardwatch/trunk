@@ -1,13 +1,20 @@
-{ config, pkgs, lib, useOptionalModule, ...}:
-with lib;                      
+{ config, pkgs, lib, ...}:
+          
 let
-  cfg = config.custom.isDev;
-in 
+  cfg = config.systems.dev;
+  
+in
+with pkgs.lib; 
 {
-    options.custom.isDev = {
-        enable = mkEnableOption "If this machine is used for software development";
+    options.systems.dev = {
+        enable = mkOption { 
+            description = "If this machine is used for software development";
+            type = types.bool;
+            default = false;
+        };
     };
-    lib.mkIf (config.custom.isDev.enable) {
-        imports = ./arduino.nix;
+    config = {
+        environment.systemPackages = [ ] ++ (lib.optionals cfg.enable) 
+        [pkgs.arduino];
     };
 }

@@ -1,7 +1,4 @@
-{ config, pkgs, useOptionalModule, ...}:
-
+{ config, pkgs, cfg, lib, ...}:
 {
-  environment.systemPackages = with pkgs; {
-    arduino
-  };
+    environment.systemPackages = lib.mkIf (cfg.enable) [pkgs.arduino];
 }
