@@ -5,6 +5,9 @@ let
 in 
 {
     options.custom.isDev = {
+        enable = mkEnableOption "If this machine is used for software development";
+    };
+    lib.mkIf (config.custom.isDev.enable) {
         imports = ./arduino.nix;
     };
 }
