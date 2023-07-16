@@ -15,14 +15,13 @@
         
         [ 
           (trunk.nixosModules.common)
-          
+          (trunk.nixosModules.hyprland) 
           {config.systems.dev.enable = true;}
           ({ pkgs,... }: {
             boot.isContainer = true;
-
+            programs.hyprland.enable = true;
             # Let 'nixos-version --json' know about the Git revision
             # of this flake.
-            system.configurationRevision = nixpkgs.lib.mkIf (self ? rev) self.rev;
 
             # Network configuration.
             networking.useDHCP = false;
