@@ -6,7 +6,7 @@
   };
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     envExtra = ''
       eval "$(starship init zsh)"
     '';

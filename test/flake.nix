@@ -1,6 +1,8 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+    microvm.url = "github:astro/microvm.nix";
+    microvm.inputs.nixpkgs.follows = "nixpkgs";
     trunk = {
       url = "path:../";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,11 +28,12 @@
   override trunk's defaults by changing hyprlands configuration. The relevant
   file is ./home.nix
   */
-  outputs = { self, nixpkgs, trunk, home-manager }: {
+  outputs = { self, nixpkgs, trunk, home-manager, microvm }: {
     nixosConfigurations.container = nixpkgs.lib.nixosSystem{
       system = "x86_64-linux";
       modules =
         [
+          microvm.nixosModules.microvm
           home-manager.nixosModules.home-manager
           (trunk.nixosModules.common)
           (import ./main.nix)

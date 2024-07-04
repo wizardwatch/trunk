@@ -1,48 +1,48 @@
 {
   "nodes": {
-  "home-manager": {
-  "inputs": {
-  "nixpkgs": [
-  "nixpkgs"
-  ]
-  },
-  "locked": {
-  "lastModified": 1690084763,
-  "narHash": "sha256-Nw680m/pyVoosSgXZW415Z657mfVM2BxaxDPjEk48Z0=",
-  "owner": "nix-community",
-  "repo": "home-manager",
-  "rev": "fb03fa5516d4e86059d24ab35a611ffa3a359547",
-  "type": "github"
-  },
-  "original": {
-  "owner": "nix-community",
-  "ref": "master",
-  "repo": "home-manager",
-  "type": "github"
-  }
-  },
-  "nixpkgs": {
-  "locked": {
-  "lastModified": 1690031011,
-  "narHash": "sha256-kzK0P4Smt7CL53YCdZCBbt9uBFFhE0iNvCki20etAf4=",
-  "owner": "NixOS",
-  "repo": "nixpkgs",
-  "rev": "12303c652b881435065a98729eb7278313041e49",
-  "type": "github"
-  },
-  "original": {
-  "id": "nixpkgs",
-  "ref": "nixos-unstable",
-  "type": "indirect"
-  }
-  },
-  "root": {
-  "inputs": {
-  "home-manager": "home-manager",
-  "nixpkgs": "nixpkgs"
-  }
-  }
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1720045378,
+        "narHash": "sha256-lmE7B+QXw7lWdBu5GQlUABSpzPk3YBb9VbV+IYK5djk=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "0a30138c694ab3b048ac300794c2eb599dc40266",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "master",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1719848872,
+        "narHash": "sha256-H3+EC5cYuq+gQW8y0lSrrDZfH71LB4DAf+TDFyvwCNA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "00d80d13810dbfea8ab4ed1009b09100cca86ba8",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
+    "root": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs"
+      }
+    }
   },
   "root": "root",
   "version": 7
-  }
+}
