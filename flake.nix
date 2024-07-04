@@ -17,7 +17,7 @@
       lib = nixpkgs.lib;
       # NixOS Modules
       nixosModules.common           = import ./modules/common.nix;
-      
+      nixosModules.desktop          = import ./modules/desktop.nix;
       # Homemanager Modules
       nixosModules.userZshStarship  = import ./home/other/starshipZsh.nix;
       nixosModules.userHyprland     = import ./home/wayland/hyprland.nix;
