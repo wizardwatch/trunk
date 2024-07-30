@@ -20,7 +20,7 @@ with pkgs.lib;
       ## god I hate java
       jdk17
       ## those videos aren't going to download themselves!
-      youtube-dl
+      # youtube-dl marked insecure
       ## the prefered way to install rust
       rustup
       ## Yet another windows compatibility layer
